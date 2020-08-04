@@ -113,11 +113,25 @@ function keyPressed(event){
 
 
 // 8
-const destHeads = document.querySelectorAll('h4')
+const destHeads = document.querySelectorAll('.destination')
 
 let destHead1 = destHeads[0]
+let desthead2 = destHeads[1]
+let destHead3 = destHeads[2]
 
+document.addEventListener('mouseenter', event => {
+    destHead1.style.border = '5px dotted orange';
+    desthead2.style.border = '5px dotted teal'
+    destHead3.style.border = '5px dotted pink'
+})
 
-
-.style.border = '5px dotted orange';
     
+// 9
+document.addEventListener('mouseleave', event => {
+    destHead1.style.border = 'none';
+    desthead2.style.border = 'none'
+    destHead3.style.border = 'none'
+})
+
+
+// 10
