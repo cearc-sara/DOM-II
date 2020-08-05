@@ -47,8 +47,8 @@ window.addEventListener('load', (event) => {
 // 4
   let noContext = document.querySelector('img');
 
-  noContext.addEventListener('contextmenu', e => {
-    e.preventDefault();
+  noContext.addEventListener('contextmenu', event => {
+    event.preventDefault();
   });
 
 
@@ -135,3 +135,32 @@ document.addEventListener('mouseleave', event => {
 
 
 // 10
+let pickPara = document.querySelectorAll('.content-pick p')
+let pick1 = pickPara[0]
+let pick2 = pickPara[1]
+let pick3 = pickPara[2]
+
+
+pick1.addEventListener('dblclick', event => {
+    pick1.style.color = 'orange'
+
+    setTimeout(function () {
+        pick1.style.color = 'black';
+    }, 5000);
+}, false);
+
+pick2.addEventListener('dblclick', event => {
+    pick2.style.color = 'teal'
+
+    setTimeout(function () {
+        pick2.style.color = 'black';
+    }, 5000);
+}, false);
+
+pick3.addEventListener('dblclick', event => {
+    pick3.style.color = 'pink'
+
+    setTimeout(function () {
+        pick3.style.color = 'black';
+    }, 5000);
+}, false);
